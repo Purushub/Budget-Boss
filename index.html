@@ -1,0 +1,314 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Journey to Becoming a Budget Boss!</title>
+    <link rel="stylesheet" href="css/aos.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #2c3e50;
+            background-color: #fffef5;
+            line-height: 1.7;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        /* Animated background with floating golden particles (antigravity feel) */
+        .animated-bg {
+            position: fixed;
+            top: 0; left: 0; right: 0; bottom: 0;
+            z-index: -2;
+            pointer-events: none;
+            background: linear-gradient(135deg, #fff8e1 0%, #fffde7 100%);
+        }
+
+        .particles {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .particle {
+            position: absolute;
+            background: radial-gradient(circle, #ffc107 30%, transparent 70%);
+            border-radius: 50%;
+            opacity: 0.6;
+            box-shadow: 0 0 15px rgba(255,193,7,0.7);
+            pointer-events: none;
+            animation: float-antigravity linear infinite;
+        }
+
+        @keyframes float-antigravity {
+            0% {
+                transform: translateY(100vh) scale(0.3) rotate(0deg);
+                opacity: 0;
+            }
+            10% { opacity: 0.7; }
+            90% { opacity: 0.7; }
+            100% {
+                transform: translateY(-150px) scale(0.8) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        header.hero {
+            background: transparent;
+            padding: 120px 20px 80px;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            font-weight: 800;
+            color: #ffc107;
+            margin: 0 0 25px;
+            letter-spacing: -1px;
+            text-shadow: 0 4px 20px rgba(255,193,7,0.25);
+        }
+
+        .hero-subtitle {
+            font-size: 1.5rem;
+            color: #444;
+            max-width: 720px;
+            margin: 0 auto 40px;
+        }
+
+        .section {
+            padding: 60px 20px;
+            max-width: 1100px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        h2.section-title {
+            font-size: 2.8rem;
+            font-weight: 700;
+            color: #ffc107;
+            text-align: center;
+            margin: 0 0 50px;
+            position: relative;
+        }
+
+        h2.section-title::after {
+            content: '';
+            width: 90px;
+            height: 5px;
+            background: #ffc107;
+            display: block;
+            margin: 20px auto 0;
+            border-radius: 3px;
+        }
+
+        .content-card {
+            background: rgba(255, 255, 255, 0.92);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-radius: 24px;
+            box-shadow: 0 12px 50px rgba(255,193,7,0.18);
+            padding: 50px;
+            margin-bottom: 60px;
+            transition: all 0.4s ease;
+            border: 1px solid rgba(255,193,7,0.12);
+        }
+
+        .content-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 60px rgba(255,193,7,0.25);
+        }
+
+        .module {
+            margin-bottom: 60px;
+        }
+
+        .module h3 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: #ffc107;
+            margin: 0 0 28px;
+            padding-bottom: 14px;
+            border-bottom: 3px solid rgba(255,193,7,0.25);
+        }
+
+        .learn-list li {
+            padding-left: 40px;
+            margin-bottom: 18px;
+            font-size: 1.18rem;
+            color: #444;
+        }
+
+        .learn-list li::before {
+            font-size: 1.5rem;
+            top: 2px;
+        }
+
+        .hero-image, .module-image {
+            border-radius: 18px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+            margin: 40px auto;
+            display: block;
+            max-width: 100%;
+            transition: transform 0.5s ease;
+        }
+
+        .hero-image:hover, .module-image:hover {
+            transform: scale(1.03);
+        }
+
+        footer {
+            background: linear-gradient(to top, #fff8e1, #fffef5);
+            color: #555;
+            text-align: center;
+            padding: 50px 20px;
+            font-size: 1rem;
+            border-top: 1px solid rgba(255,193,7,0.2);
+            position: relative;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="animated-bg">
+        <div class="particles" id="particles"></div>
+    </div>
+
+    <header class="hero" data-aos="fade-down" data-aos-duration="1400">
+        <h1>Your Journey to Becoming a Budget Boss!</h1>
+        <p class="hero-subtitle">Master financial literacy, budgeting, saving, investing, and smart money decisions — step by step.</p>
+        <img src="images/canva-white-yellow-illustrative-business-finance-strategy-a4-_EoVBFrS1Rc.jpg" alt="Modern finance strategy illustration with yellow theme" class="hero-image">
+    </header>
+
+    <section class="section">
+        <h2 class="section-title">Your Learning Journey</h2>
+
+        <div class="content-card" data-aos="fade-up">
+            <div class="module">
+                <h3>Module 1 – Concept, Value and Types of Money</h3>
+                <ul class="learn-list">
+                    <li>Understand the origin, evolution, and value of money — from ancient barter to digital payments and cryptocurrencies.</li>
+                    <li>Basic Concepts about Money</li>
+                    <li>Types of Money</li>
+                    <li>Cryptocurrency</li>
+                    <li>Quiz – Module 1</li>
+                </ul>
+                <p><strong>You’ll Learn:</strong> What money is and why it’s valuable. The types of money — commodity, fiat, digital, and fiduciary. How cryptocurrencies like Bitcoin and Ethereum work. The role of money as a medium of exchange, store of value, and unit of account.</p>
+                <p><strong>Goal:</strong> Build a strong foundation of how money evolved, how it works, and why it’s important in our daily lives.</p>
+                <img src="images/evolution-of-money-01-1024x560-1.webp" class="module-image">
+            </div>
+
+            <div class="module">
+                <h3>Module 2 – Basics of Budgeting, Saving, and Investment</h3>
+                <ul class="learn-list">
+                    <li>Learn how to plan, save, and invest like a pro — making smart money choices for real-life situations.</li>
+                    <li>Basics of Budgeting</li>
+                    <li>Basics of Saving</li>
+                    <li>Basics of Investment</li>
+                    <li>Profit & Loss</li>
+                    <li>Quiz – Module 2</li>
+                    <li>Activity: Plan your dream birthday party under ₹5,000 — balancing fun and finance!</li>
+                </ul>
+                <p><strong>You’ll Learn:</strong> How to plan budgets for needs, wants, and savings goals. The importance of saving and how interest helps your money grow. How to invest in stocks, bonds, mutual funds, or skills that build value. Understanding profit and loss — how income, expenses, and returns shape financial outcomes.</p>
+                <p><strong>Goal:</strong> Develop practical money skills — budgeting, saving, investing, and tracking performance.</p>
+                <img src="images/young-boy-managing-personal-budget-savings-illustration-depicts-engaged-his-finances-piggy-bank-calculator-434992945.jpg" alt="Young student learning budgeting and saving" class="module-image">
+            </div>
+
+            <div class="module">
+                <h3>Module 3 – Final Capstone Project</h3>
+                <p>Put everything you’ve learned into action using an interactive simulator that shows how your money grows over time.</p>
+                <h4>Compound Interest & Investment Simulator</h4>
+                <p><strong>You’ll Learn:</strong></p>
+                <ul class="learn-list">
+                    <li>How compound interest multiplies your savings.</li>
+                    <li>How different investments perform over time (stocks, gold, mutual funds, etc.).</li>
+                    <li>How to adjust risk levels and rebalance portfolios.</li>
+                </ul>
+                <p><strong>Reflective Questions:</strong></p>
+                <ul class="learn-list">
+                    <li>Which investment grows fastest and why?</li>
+                    <li>How does time affect growth?</li>
+                    <li>How would you balance risk and reward?</li>
+                </ul>
+                <p><strong>Goal:</strong> Apply your learning in a real-world simulation and become a true “Budget Boss.”</p>
+                <img src="images/Budget-Boss-Logo.png" alt="Compound interest growth with golden coins" class="module-image">
+            </div>
+        </div>
+    </section>
+
+    <section id="youll-learn" class="section" data-aos="zoom-in" data-aos-duration="1000">
+        <h2 class="section-title">You’ll Learn To</h2>
+        <div class="content-card" style="text-align: center;">
+            <ul class="learn-list" style="display: inline-block; text-align: left; max-width: 800px;">
+                <li>Understand the value and evolution of money</li>
+                <li>Manage and plan budgets efficiently</li>
+                <li>Build strong saving and investing habits</li>
+                <li>Calculate profit, loss, and returns confidently</li>
+                <li>Make smart financial decisions using real-world data</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="why-matters" class="section" data-aos="fade-up">
+        <h2 class="section-title">Why This Matters</h2>
+        <div class="content-card">
+            <p style="font-size: 1.25rem; text-align: center; max-width: 900px; margin: 0 auto 40px;">
+                This course helps students build essential life skills in financial literacy — empowering them to think critically, manage money wisely, and plan for the future.
+            </p>
+            <img src="images/diverse-team-collaborating-financial-investments-planning-illustration-multicultural-professionals-discussing-business-432823763.jpg" alt="Students and people learning financial concepts together" class="module-image">
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 Budget Boss Course | skillizee.io </p>
+    </footer>
+
+    <script src="js/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1100,
+            once: true,
+            easing: 'ease-out-cubic'
+        });
+
+        // Create floating golden particles (antigravity style - rising up slowly)
+        function createParticles() {
+            const particlesContainer = document.getElementById('particles');
+            const count = 60; // number of particles
+
+            for (let i = 0; i < count; i++) {
+                const particle = document.createElement('div');
+                particle.classList.add('particle');
+
+                // Random size between 4px and 18px
+                const size = Math.random() * 14 + 4;
+                particle.style.width = `${size}px`;
+                particle.style.height = `${size}px`;
+
+                // Random horizontal position
+                particle.style.left = `${Math.random() * 100}vw`;
+
+                // Random animation duration (slow rise = antigravity feel)
+                const duration = Math.random() * 40 + 35; // 35–75 seconds
+                particle.style.animationDuration = `${duration}s`;
+
+                // Random delay so they don't all start together
+                const delay = Math.random() * -duration;
+                particle.style.animationDelay = `${delay}s`;
+
+                // Random opacity variation
+                particle.style.opacity = Math.random() * 0.4 + 0.3;
+
+                particlesContainer.appendChild(particle);
+            }
+        }
+
+        createParticles();
+    </script>
+
+</body></html>
